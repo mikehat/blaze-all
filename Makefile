@@ -9,6 +9,15 @@ GHC_FLAGS = -O2 -fforce-recomp -ibenchmarks -isrc -itests
 BENCHMARK_FLAGS = --resamples 10000
 
 ################################################################################
+# Code generation
+################################################################################
+
+# Generate the actual HTML combinators
+combinators:
+	runghc -isrc src/Util/GenerateHtmlCombinators.hs
+
+
+################################################################################
 # Tests
 ################################################################################
 

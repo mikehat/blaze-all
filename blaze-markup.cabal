@@ -54,6 +54,8 @@ Library
     Text.Blaze.XHtml1.Transitional.Attributes
     Text.Blaze.XHtml5
     Text.Blaze.XHtml5.Attributes
+    Text.Blaze.Css21.Value
+    Text.Blaze.Css21.Style
 
   Build-depends:
     base          >= 4    && < 5,

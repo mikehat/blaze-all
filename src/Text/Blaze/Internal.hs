@@ -523,6 +523,9 @@ instance Attributable (MarkupM a -> MarkupM b) where
     h ! f = (! f) . h
     {-# INLINE (!) #-}
 
+instance Attributable Attribute where
+    (Attribute h) ! f = Attribute $ (! f) . h
+
 -- | Shorthand for setting an attribute depending on a conditional.
 --
 -- Example:
@@ -603,3 +606,4 @@ null markup = case markup of
         EmptyChoiceString        -> True
 
     emptyStaticString = B.null . getUtf8ByteString
+

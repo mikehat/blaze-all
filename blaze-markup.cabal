@@ -43,7 +43,7 @@ Test-suite blaze-markup-tests
   Type:           exitcode-stdio-1.0
   Hs-source-dirs: src tests
   Main-is:        TestSuite.hs
-  Ghc-options:    -Wall
+  Ghc-options:    -Wall -fsimpl-tick-factor=200
 
   Other-modules:
     Text.Blaze.Tests
@@ -66,7 +66,7 @@ Benchmark RunHtmlBenchmarks
   Type:             exitcode-stdio-1.0
   Main-is:          RunHtmlBenchmarks.hs
   Hs-source-dirs: src benchmarks
-  Ghc-options:    -O2 -fforce-recomp -main-is RunHtmlBenchmarks
+  Ghc-options:    -O2 -fforce-recomp -main-is RunHtmlBenchmarks -fsimpl-tick-factor=200
   Build-depends:
     base          >= 4    && < 5,
     blaze-builder >= 0.3  && < 0.5,
